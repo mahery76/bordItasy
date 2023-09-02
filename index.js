@@ -3,6 +3,7 @@ const Roles =     require("./models/Role");
 const Produits =  require("./models/Produit");
 const Tables =    require("./models/Table");
 const Prix_produits = require("./models/Prix_produit")
+const Stocks =        require("./models/Stock")
 
 // const admin = Roles.create({
 //   nom_role: "administrateur"
@@ -23,8 +24,10 @@ const Prix_produits = require("./models/Prix_produit")
 //   num_table: "T1"
 // })
 
-const pp = Prix_produits.create({
-  prix_produit: 20.154,
-  id_produit: "P00027"
-})
+// const pp = Prix_produits.create({
+//   prix_produit: 20.154,
+//   id_produit: "P00027"
+// })
+
+// const 
 

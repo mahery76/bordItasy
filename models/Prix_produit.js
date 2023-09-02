@@ -25,4 +25,5 @@ create_seq(sq, "prix_produit_id_seq", Prix_produits, "id_prix_produits", "PP")
 Prix_produits.sync().then(() => {
     console.log("Prix produits model synced");
 });
+
 module.exports = Prix_produits;
