@@ -17,6 +17,7 @@ const Produits = sq.define('Produits', {
     prix_produit: {
         type: DataTypes.DECIMAL(10,2),
         allowNull: true,
+        defaultValue: 0,
     },
     qte_min_produit: {
         type: DataTypes.INTEGER
