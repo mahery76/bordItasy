@@ -1,0 +1,38 @@
+const { DataTypes } = require('sequelize');
+const {sq} =  require("../config/db.js")
+const Role = require("./Role.js");
+const create_seq = require('./create_seq.js');
+
+const Users = sq.define('Users', {
+  id_user: {
+    type: DataTypes.STRING,
+    primaryKey: true,
+    allowNull: false,
+    unique: true,
+  },
+  nom_user: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  mot_de_passe: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+});
+
+Role.hasMany(Users);
+Users.belongsTo(Role, { foreignKey: 'id_role' }); // Relation avec le modèle Role
+
+
+// Créez une séquence PostgreSQL pour la génération automatique des identifiants auto-incrémentés
+// sq.query("CREATE SEQUENCE utilisateur_id_seq START 1");
+
+create_seq(sq, "utilisateur_id_seq", Users, "id_user", "U")
+
+
+// Users.sync({force: true}).then(() => {
+Users.sync().then(() => {
+  console.log("User Model synced");
+});
+
+module.exports = Users;
