@@ -5,6 +5,7 @@ const Tables =    require("./models/Table");
 const Prix_produits = require("./models/Prix_produit")
 const Stocks =        require("./models/Stock")
 const Factures = require("./models/Facture")
+const Commandes = require("./models/Commande")
 
 // const admin = Roles.create({
 //   nom_role: "administrateur"
@@ -44,5 +45,9 @@ const Factures = require("./models/Facture")
 //   id_user: "U00022",
 // })
 
-
+const Commande1 = Commandes.create({
+  qte_produit: 12,
+  id_produit: "P00027",
+  id_facture: "F00001",
+})
 
