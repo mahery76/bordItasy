@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const {sq} =  require("../config/db.js")
-const Role = require("./Role.js");
+const Roles = require("./Role.js");
 const create_seq = require('./create_seq.js');
 
 const Users = sq.define('Users', {
@@ -20,8 +20,7 @@ const Users = sq.define('Users', {
   },
 });
 
-Role.hasMany(Users);
-Users.belongsTo(Role, { foreignKey: 'id_role' }); // Relation avec le modèle Role
+Users.belongsTo(Roles, { foreignKey: 'id_role' }); // Relation avec le modèle Role
 
 
 // Créez une séquence PostgreSQL pour la génération automatique des identifiants auto-incrémentés
