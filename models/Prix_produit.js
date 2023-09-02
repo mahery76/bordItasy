@@ -1,7 +1,8 @@
 const { DataTypes } = require('sequelize');
 const {sq} =  require("../config/db.js");
-const create_seq = require('./create_seq.js');
 const Produits = require("./Produit.js")
+const create_seq = require('../functions/create_seq.js');
+
 
 const Prix_produits = sq.define('Prix_produits', {
     id_prix_produit: {
@@ -11,7 +12,7 @@ const Prix_produits = sq.define('Prix_produits', {
         unique: true,
     },
     prix_produit: {
-        type: DataTypes.DOUBLE,
+        type: DataTypes.DECIMAL(10,2),
         allowNull: false,
     }
 }) 

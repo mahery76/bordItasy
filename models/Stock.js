@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const { sq } = require("../config/db.js");
-const create_seq = require('./create_seq.js');
+const create_seq = require('../functions/create_seq.js');
 const Produits = require("./Produit.js");
 const Prix_produits = require('./Prix_produit.js');
 
@@ -19,14 +19,11 @@ const Stocks = sq.define('Stocks', {
         type: DataTypes.DOUBLE,
         allowNull: true,
     },
-    prix_achat_dep: {
-        type: DataTypes.DOUBLE,
+    prix_achat_depense: {
+        type: DataTypes.DECIMAL(10,2),
         allowNull: false,
     },
-    prix_vente: {
-        type: DataTypes.DOUBLE,
-        allowNull: true,
-    },
+
 })
 
 Stocks.belongsTo(Produits,

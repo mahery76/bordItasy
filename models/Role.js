@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const {sq} =  require("../config/db.js");
-const create_seq = require('./create_seq.js');
+const create_seq = require('../functions/create_seq.js');
 
 const Roles = sq.define('Roles', {
   id_role: {

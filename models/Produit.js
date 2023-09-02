@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize')
 const {sq} = require("../config/db.js");
-const create_seq = require('./create_seq.js');
+const create_seq = require('../functions/create_seq.js');
 
 
 const Produits = sq.define('Produits', {
@@ -14,7 +14,10 @@ const Produits = sq.define('Produits', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-
+    prix_produit: {
+        type: DataTypes.DECIMAL(10,2),
+        allowNull: true,
+    },
     qte_min_produit: {
         type: DataTypes.INTEGER
     }
