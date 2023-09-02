@@ -29,5 +29,11 @@ const Stocks =        require("./models/Stock")
 //   id_produit: "P00027"
 // })
 
-// const 
+const Fanta = Stocks.create({
+  designation_depense: null,
+  quantite: 14,
+  prix_achat_dep: 14000,
+  prix_vente: null,
+  id_produit: "P00027"
+})
 

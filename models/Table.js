@@ -21,7 +21,6 @@ const Tables = sq.define('Table', {
 create_seq(sq, "table_id_seq", Tables, "id_table", "T")
 
 
-// Tables.sync({force: true}).then(() => {
 Tables.sync().then(() => {
     console.log("table model synced")
 })
