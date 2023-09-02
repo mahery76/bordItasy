@@ -4,6 +4,7 @@ const Produits =  require("./models/Produit");
 const Tables =    require("./models/Table");
 const Prix_produits = require("./models/Prix_produit")
 const Stocks =        require("./models/Stock")
+const Factures = require("./models/Facture")
 
 // const admin = Roles.create({
 //   nom_role: "administrateur"
@@ -29,11 +30,19 @@ const Stocks =        require("./models/Stock")
 //   id_produit: "P00027"
 // })
 
-const Fanta = Stocks.create({
-  designation_depense: null,
-  quantite: 14,
-  prix_achat_dep: 14000,
-  prix_vente: null,
-  id_produit: "P00027"
-})
+// const Fanta = Stocks.create({
+//   designation_depense: null,
+//   quantite: 14,
+//   prix_achat_dep: 14000,
+//   prix_vente: null,
+//   id_produit: "P00027"
+// })
+
+// const Facture1 = Factures.create({
+//   est_payee: true,
+//   id_table: "T00002",
+//   id_user: "U00022",
+// })
+
+
 

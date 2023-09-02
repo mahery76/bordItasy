@@ -4,7 +4,7 @@ const create_seq = require('./create_seq.js');
 const Produits = require("./Produit.js")
 
 const Prix_produits = sq.define('Prix_produits', {
-    id_prix_produits: {
+    id_prix_produit: {
         type: DataTypes.STRING,
         primaryKey: true,
         allowNull: false,
