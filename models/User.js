@@ -29,9 +29,9 @@ Users.belongsTo(Roles, { foreignKey: 'id_role' }); // Relation avec le modèle R
 create_seq(sq, "utilisateur_id_seq", Users, "id_user", "U")
 
 
-// Users.sync({force: true}).then(() => {
-Users.sync().then(() => {
-  console.log("User Model synced");
-});
+// // Users.sync({force: true}).then(() => {
+// Users.sync().then(() => {
+//   console.log("User Model synced");
+// });
 
 module.exports = Users;

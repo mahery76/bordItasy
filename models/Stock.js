@@ -36,9 +36,9 @@ Stocks.belongsTo(Produits,
 // Créez une séquence PostgreSQL pour la génération automatique des identifiants auto-incrémentés
 // sq.query("CREATE SEQUENCE stock_id_seq START 1");
 
-create_seq(sq, "stock_id_seq", Stocks, "id_stock", "S")
-Stocks.sync().then(() => {
-    console.log("Stock model synced")
-})
+// create_seq(sq, "stock_id_seq", Stocks, "id_stock", "S")
+// Stocks.sync().then(() => {
+//     console.log("Stock model synced")
+// })
 
 module.exports = Stocks

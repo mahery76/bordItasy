@@ -21,9 +21,9 @@ const Roles = sq.define('Roles', {
 create_seq(sq, "role_id_seq", Roles, "id_role", "R")
 
 
-// Roles.sync({force: true}).then(() => {
-Roles.sync().then(() => {
-    console.log("Role Model synced");
-  });
+// // Roles.sync({force: true}).then(() => {
+// Roles.sync().then(() => {
+//     console.log("Role Model synced");
+//   });
 
 module.exports = Roles;

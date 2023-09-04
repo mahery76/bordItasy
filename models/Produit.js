@@ -30,9 +30,9 @@ const Produits = sq.define('Produits', {
 create_seq(sq, "produit_id_seq", Produits, "id_produit", "P")
 
 
-// Produits.sync({force: true}).then(() => {
-Produits.sync().then(() => {
-    console.log("Produit Model synced")
-})
+// // Produits.sync({force: true}).then(() => {
+// Produits.sync().then(() => {
+//     console.log("Produit Model synced")
+// })
 
 module.exports = Produits;
