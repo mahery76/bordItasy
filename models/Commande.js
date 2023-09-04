@@ -23,10 +23,4 @@ Commandes.belongsTo(Factures, {foreignKey: 'id_facture'})
 // sq.query("CREATE SEQUENCE commande_id_seq START 1");
 
 create_seq(sq, "commande_id_seq", Commandes, "id_commande", "C")
-
-
-// Commandes.sync().then(() => {
-//     console.log("Commande model synced")
-// })
-
 module.exports = Commandes

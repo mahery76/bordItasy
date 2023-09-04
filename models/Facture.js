@@ -22,9 +22,4 @@ Factures.belongsTo(Users,{foreignKey: 'id_users'})
 // sq.query("CREATE SEQUENCE facture_id_seq START 1");
 
 create_seq(sq, "facture_id_seq", Factures, "id_facture", "F")
-
-// Factures.sync().then(() => {
-//     console.log("Facture model synced")
-// })
-
 module.exports = Factures
