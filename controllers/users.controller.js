@@ -6,42 +6,43 @@ const Op = Sequelize.Op
 
 // Create a new user
 exports.createUser = (req, res) => {
-    const admin = {
-        nom_user: "Nomena",
-        mot_de_passe: "Nomena22"
-    }
-    Users.create(admin)
+  console.log(req.body)
+  const admin = req.body
+  Users.create(admin)
     .then(data => {
-        res.send(data)
+      res.send(data)
     })
     .catch(err => {
-        res.status(500).send({
-            message: 
-            err.message || "Some error occured while creating role."
-        })
+      res.status(500).send({
+        message:
+          err.message || "Some error occured while creating role."
+      })
     })
 }
 
 // Get a user username, password => nom_user, nom_role
 exports.getOneUser = (req, res) => {
-    
-    const password = req.params.password
-    const username = req.params.username
 
-    const condition = {
-        attributes: ["nom_user", ],
-        include: [
-            {
-                model: Roles,
-                attributes: "nom_role"
-            }
-        ],
-        where: {
-            nom_user: username,
-            mot_de_passe: password
-        }
+  console.log("controllers function is working correctly")
+  console.log(req.query)
+  const password = req.query.password
+  const username = req.query.username
+
+  const condition = {
+    attributes: ["nom_user",],
+    include: [
+      {
+        model: Roles,
+        attributes: ["nom_role"]
+      }
+    ],
+    where: {
+      nom_user: username,
+      mot_de_passe: password
     }
-    Users.findOne(condition)
+  }
+
+  Users.findOne(condition)
     .then(data => {
       if (data) {
         res.send(data);
@@ -53,7 +54,7 @@ exports.getOneUser = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: "Error retrieving Tutorial with username=" + username
+        message: "Error retrieving user with username=" + username
       });
     });
 }

@@ -2,3 +2,6 @@
 - cd bordItasy 
 - create a postgres database (user: postgres, database name: bordItasyDb)
 - 
+
+postman
+https://app.getpostman.com/join-team?invite_code=3d122735c5a81213ebbc6fcd02ce1864

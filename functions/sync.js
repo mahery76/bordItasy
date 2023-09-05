@@ -9,7 +9,8 @@ const Factures = require("../models/Facture")
 const Commandes = require("../models/Commande")
 
 const syncModels = async () => {
-    await sq.sync({force: true})
+    // await sq.sync({force: true})
+    await sq.sync()
     console.log('all models synced')
 }
 module.exports = syncModels

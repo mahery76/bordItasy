@@ -1,27 +1,19 @@
 const Roles = require("../models/Role");
 const { Sequelize } = require('sequelize');
-const { sq } = require("../config/db.js");
 const Op = Sequelize.Op
 
 // Creer un nouveau role
 exports.createRole = (req, res) => {
+    console.log(req.body)
     //validation request
-    if (!req.body.title){
+    if (!req.body.nom_role){
         res.status(400).send({
             message: "Role cannot be empty"
         })
         return;
     }
     // create a role 
-
-    const roles = [
-        {nom_role: "Administrateur"},
-        {nom_role: "Employee"},
-    ]
-
-    const role1 = {
-        nom_role: "Administrateur",
-    }
+    const role1 = req.body
  
     Roles.create(role1)
     .then(data => {
