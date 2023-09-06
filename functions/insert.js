@@ -10,13 +10,13 @@ const Commandes = require("../models/Commande")
 const insertSequentially = async () => {
 
     const role1 = await Roles.create({
-        nom_role: "employee"
+        nom_role: "admin"
     });
     console.log("one role created")
 
     const user1 = await Users.create({
-        nom_user: "ha",
-        mot_de_passe: "ha",
+        nom_user: "ad",
+        mot_de_passe: "ad",
         id_role: role1.id_role
     });
     console.log("one user created")
