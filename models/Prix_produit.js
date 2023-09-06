@@ -21,6 +21,6 @@ Prix_produits.belongsTo(Produits, {foreignKey: 'id_produit'})
 // Créez une séquence PostgreSQL pour la génération automatique des identifiants auto-incrémentés
 // sq.query("CREATE SEQUENCE prix_produit_id_seq START 1");
 
-create_seq(sq, "prix_produit_id_seq", Prix_produits, "id_prix_produits", "PP")
+create_seq(sq, "prix_produit_id_seq", Prix_produits, "id_prix_produit", "PP")
 
 module.exports = Prix_produits;

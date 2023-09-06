@@ -16,6 +16,7 @@ const Factures = sq.define('Factures', {
         type: DataTypes.BOOLEAN,
     }
 })
+
 Factures.belongsTo(Tables,{foreignKey: 'id_table'})
 Factures.belongsTo(Users,{foreignKey: 'id_users'})
 

@@ -8,9 +8,20 @@ const Stocks =        require("../models/Stock")
 const Factures = require("../models/Facture")
 const Commandes = require("../models/Commande")
 
+
+
 const syncModels = async () => {
-    // await sq.sync({force: true})
+
+    // raha ts nanova model dia ity no miasa 
     await sq.sync()
     console.log('all models synced')
+
+    // //raha nanova structure-model ray na maro dia ity no miasa
+    // await sq.sync({force: true})
+    // console.log('all models deleted and recreated')
+    
+    // //inserer donnees par defaut avy aty am backend 
+    const insertSequentially = require("./insert")
+
 }
 module.exports = syncModels

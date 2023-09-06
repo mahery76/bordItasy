@@ -17,6 +17,7 @@ const runServer = async () => {
     //     res.json({ message: "Welcome to bezkoder application." });
     // });
 
+    
     require("./routes/roles.routes")(app);
     require("./routes/users.routes")(app);
 
