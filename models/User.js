@@ -26,5 +26,5 @@ Users.belongsTo(Roles, { foreignKey: 'id_role' }); // Relation avec le modèle R
 // Créez une séquence PostgreSQL pour la génération automatique des identifiants auto-incrémentés
 // sq.query("CREATE SEQUENCE utilisateur_id_seq START 1");
 
-create_seq(sq, "utilisateur_id_seq", Users, "id_user", "U")
+create_seq(sq, "user_id_seq", Users, "id_user", "U")
 module.exports = Users;

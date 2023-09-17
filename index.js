@@ -8,22 +8,27 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 const runServer = async () => {
-    await syncModels()
-
-    // // simple api
-    // app.get("/", (req, res) => {
-    //     console.log('coucou server ')
-    //     res.send(req.body)
-    //     res.json({ message: "Welcome to bezkoder application." });
-    // });
-
+    try {   
+        await syncModels()
     
-    require("./routes/roles.routes")(app);
-    require("./routes/users.routes")(app);
-
-    app.listen(3001, () => {
-        console.log('server running on port 3001')
-    })
+        // // simple api
+        // app.get("/", (req, res) => {
+        //     console.log('coucou server ')
+        //     res.send(req.body)
+        //     res.json({ message: "Welcome to bezkoder application." });
+        // });
+    
+        
+        require("./routes/roles.routes")(app);
+        require("./routes/users.routes")(app);
+        require("./routes/produits.routes")(app);
+    
+        app.listen(3001, () => {
+            console.log('server running on port 3001')
+        })
+    } catch (err) {
+        console.log(err)
+    }
 }
 runServer()
 

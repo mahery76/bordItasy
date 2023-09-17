@@ -9,21 +9,21 @@ exports.createProduit = (req, res) => {
 } 
 
 // get all produits
-exports.getProduits = (req, res) => {
+exports.getAllProduits = (req, res) => {
 
 }
 
 // get one produit
-exports.getProduits = (req, res) => {
+exports.getOneProduit = (req, res) => {
 
 }
 
 // delete produit
-exports.deleteProduits = (req, res) => {
+exports.deleteOneProduit = (req, res) => {
 
 }
 
 // update produit
-exports.updateProduits = (req, res) => {
-    
+exports.updateOneProduit = (req, res) => {
+
 }

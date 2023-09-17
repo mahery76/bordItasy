@@ -9,3 +9,4 @@ const create_seq = (sq, seq_name, Model, id_model, letter ) => {
 }
 
 module.exports = create_seq
+
