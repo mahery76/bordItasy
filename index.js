@@ -10,15 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 const runServer = async () => {
     try {   
         await syncModels()
-    
-        // // simple api
-        // app.get("/", (req, res) => {
-        //     console.log('coucou server ')
-        //     res.send(req.body)
-        //     res.json({ message: "Welcome to bezkoder application." });
-        // });
-    
-        
+
         require("./routes/roles.routes")(app);
         require("./routes/users.routes")(app);
         require("./routes/produits.routes")(app);
@@ -29,6 +21,6 @@ const runServer = async () => {
     } catch (err) {
         console.log(err)
     }
-}
+} 
 runServer()
 

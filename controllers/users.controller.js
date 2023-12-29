@@ -58,4 +58,3 @@ exports.getOneUser = (req, res) => {
       });
     });
 }
-

@@ -62,6 +62,7 @@ const insertSequentially = async () => {
       id_facture: Facture1.id_facture,
     })
     console.log('one command created')
+
 }
 
 insertSequentially()

@@ -20,7 +20,6 @@ function App() {
           <Route path="statistique" element={<Statistique/>}/>
         </Route>
         <Route path="/employee" element={<Commande />} />
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
